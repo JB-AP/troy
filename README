@@ -57,7 +57,8 @@ AVAILABLE METHODS:
 - getStartups(startup_id='')
 - getStartupsSearch(slug='', domain='')
 
-- getTagsStartups(tag_id='')
+- getTagsStartups(tag_id='', order='', perPage=None, page=None)
+  - order can optionally be 'popularity', perPage is the number of results per request, page is desired page number of a multi page request
 
 - getStartupRoles(user_id='', startup_id='')
 
@@ -73,6 +74,9 @@ AVAILABLE METHODS:
 - getUsers(user_id='')
 - getUsersSearch(slug = '', email = '')
 - getMe()
+
+- getSearch(query = '', atype = 'User')
+  - a type can be 'Startup', 'LocationTag', or more. See AngelList API
 
 
 KNOWN ISSUES:
